@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>com.romankutkin.php-brace-expander</id>
+
+    <name>PHP Brace Expander</name>
+    <description></description>
+
+    <vendor>Roman Kutkin</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
+</idea-plugin>
