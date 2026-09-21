@@ -2,10 +2,18 @@
     <id>com.romankutkin.php-brace-expander</id>
 
     <name>PHP Brace Expander</name>
-    <description></description>
+    <description>
+        Expands empty PHP class-like bodies on Enter using PER Coding Style 3.1 brace placement.
+    </description>
 
     <vendor>Roman Kutkin</vendor>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.php</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <enterHandlerDelegate
+            implementation="com.romankutkin.phpbraceexpander.PhpBraceExpanderEnterHandler"
+            order="first"/>
+    </extensions>
 </idea-plugin>
