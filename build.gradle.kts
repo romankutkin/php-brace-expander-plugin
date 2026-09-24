@@ -7,11 +7,20 @@ plugins {
 }
 
 dependencies {
-    testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
+    testRuntimeOnly(libs.junit)
 
     intellijPlatform {
         phpstorm("2026.2")
         bundledPlugin("com.jetbrains.php")
-        testFramework(TestFrameworkType.Platform)
+        testFrameworks(
+            TestFrameworkType.Platform,
+            TestFrameworkType.JUnit5,
+            TestFrameworkType.JUnit5CodeInsight,
+        )
     }
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
